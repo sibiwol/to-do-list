@@ -1,5 +1,6 @@
 .form,
-.greetings {
+.greetings,
+.targetting {
   display: none;
 }
 
