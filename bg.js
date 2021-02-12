@@ -1,3 +1,5 @@
+// 프랑스국립중앙박물관연합
+//https://www.photo.rmn.fr/CS.aspx?VP3=SearchResult&VBID=2CMFCI8ABZT12&SMLS=1&RW=1904&RH=851&PN=1#/SearchResult&VBID=2CMFCI8ABZT12&SMLS=1&RW=1904&RH=851&PN=1
 const body = document.querySelector('body');
 
 const IMG_NUMBER = 5
