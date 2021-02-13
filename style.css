@@ -2,6 +2,7 @@ body {
   margin: 0;
 }
 .main {
+  position: relative;
   width: 100%;
   margin: auto;
   margin-top: 12%;
@@ -18,6 +19,12 @@ body {
 
 .showing {
   display: block;
+}
+
+.js-weather {
+  position: absolute;
+  top: 24px;
+  right: 32px;
 }
 
 @keyframes fadeIn {
