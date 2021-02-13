@@ -33,6 +33,8 @@ body {
   border-radius: 4px;
   outline: none;
   caret-color: aliceblue;
+  color: aliceblue;
+  text-align: center;
 }
 input::placeholder {
   text-align: center;
@@ -50,8 +52,8 @@ input::placeholder {
 }
 
 .js-toDoList {
+  margin: 8px 0;
   padding: 0;
-  width: 170px;
 }
 
 .js-toDoList li {
