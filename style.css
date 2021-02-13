@@ -19,16 +19,21 @@ body {
 }
 
 .js-form,
-.js-greetings,
 .js-targetForm,
 .js-toDoForm {
   width: 170px;
 }
 
+.js-greetings,
+.js-targetting {
+  color: aliceblue;
+}
+
 .main input {
   margin: 4px;
   height: 24px;
-  background-color: rgba(0, 0, 0, 0.36);
+  background-color: rgba(0, 0, 0, 0.18);
+
   border: none;
   border-radius: 4px;
   outline: none;
@@ -57,6 +62,7 @@ input::placeholder {
 }
 
 .js-toDoList li {
+  margin: 2px;
   list-style: none;
   cursor: pointer;
 }
@@ -64,6 +70,8 @@ input::placeholder {
   padding: 0 6px 0 0;
   background-color: transparent;
   border: none;
+  color: rgba(182, 0, 0, 0.74);
+  font-weight: bold;
 }
 
 .js-weather {
