@@ -11,6 +11,13 @@ body {
   align-items: center;
 }
 
+.js-clock h1 {
+  margin-bottom: 3rem;
+  font-size: 6rem;
+  color: aliceblue;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
 .form,
 .greetings,
 .targetting {
