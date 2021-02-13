@@ -9,6 +9,7 @@ let toDos = []
 function filterFn(toDo) {
     return toDo.id === 1
 }
+
 function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;
@@ -29,11 +30,11 @@ function paintToDo(text) {
     const delBtn = document.createElement('button');
     const span = document.createElement('span')
     const newId = toDos.length + 1;
-    delBtn.innerText = "❌";
-    delBtn.addEventListener('click', deleteToDo)
+    delBtn.innerText = "✔";
+    li.addEventListener('click', deleteToDo)
     span.innerText = text;
-    li.appendChild(span);
     li.appendChild(delBtn);
+    li.appendChild(span);
     li.id = newId;
     toDoList.appendChild(li);
     const toDoObj = {
