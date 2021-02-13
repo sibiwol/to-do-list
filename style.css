@@ -18,6 +18,27 @@ body {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
 }
 
+.js-form,
+.js-greetings,
+.js-targetForm,
+.js-toDoForm {
+  width: 170px;
+}
+
+.main input {
+  margin: 4px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.36);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  caret-color: aliceblue;
+}
+input::placeholder {
+  text-align: center;
+  color: aliceblue;
+}
+
 .form,
 .greetings,
 .targetting {
@@ -26,6 +47,21 @@ body {
 
 .showing {
   display: block;
+}
+
+.js-toDoList {
+  padding: 0;
+  width: 170px;
+}
+
+.js-toDoList li {
+  list-style: none;
+  cursor: pointer;
+}
+.js-toDoList button {
+  padding: 0 6px 0 0;
+  background-color: transparent;
+  border: none;
 }
 
 .js-weather {
