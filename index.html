@@ -16,28 +16,31 @@
     <script defer src="target.js"></script>
 </head>
 <body>
-    <div class="js-clock">
-        <h1>00:00</h1>
+    <div class="main">
+        <div class="js-clock">
+            <h1>00:00</h1>
+        </div>
+        <!-- ask user's name -->
+        <form class="js-form form">
+            <input type="text" placeholder="What is your name">
+        </form>
+        <h4 class="js-greetings greetings"></h4>
+    
+        <!-- ask user's target -->
+        <form class="js-targetForm form">
+            <input type="text" placeholder='Write a your target'>
+        </form>
+        <h4 class="js-targetting targetting"></h4>
+    
+        <!-- ask user's toDoList -->
+        <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do" />
+        </form>
+        <ul class="js-toDoList">
+            
+        </ul>
     </div>
-    <!-- ask user's name -->
-    <form class="js-form form">
-        <input type="text" placeholder="What is your name">
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-
-    <!-- ask user's target -->
-    <form class="js-targetForm form">
-        <input type="text" placeholder='Write a your target'>
-    </form>
-    <h4 class="js-targetting targetting"></h4>
-
-    <!-- ask user's toDoList -->
-    <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList">
-        
-    </ul>
+    
     <span class="js-weather"></span>
 </body>
 </html>
