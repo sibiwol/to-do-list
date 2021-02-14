@@ -6,10 +6,6 @@ const TODOS_LS = 'toDos'
 
 let toDos = [] 
 
-function filterFn(toDo) {
-    return toDo.id === 1
-}
-
 function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;

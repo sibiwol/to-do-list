@@ -5,19 +5,17 @@ const targetting = document.querySelector('.js-targetting')
 const TARGET_LS = "currentTarget"
 const SHOWING_TARGETTING_CN = 'showing';
 
+
 function saveTarget(text) {
-    localStorage.saveItem(TARGET_LS, text)
+    localStorage.setItem(TARGET_LS, text)
 }
 
-function paintTargetting(text) {
-    targetForm.classList.remove(SHOWING_TARGETTING_CN);
-    targetting.classList.add(SHOWING_TARGETTING_CN)
-    targetting.innerText = `${text}`
-}
 function handleTargettingSubmit(event) {
+    targetForm.classList.add(SHOWING_TARGETTING_CN)
     event.preventDefault()
     const currentValue = targetInput.value;
     paintTargetting(currentValue)
+    saveTarget(currentValue)
 }
 
 function askForTarget() {
@@ -25,11 +23,32 @@ function askForTarget() {
     targetForm.addEventListener('submit', handleTargettingSubmit)
 }
 
+function paintTargetting(text) {
+    targetForm.classList.remove(SHOWING_TARGETTING_CN);
+    targetting.classList.add(SHOWING_TARGETTING_CN)
+    targetting.innerText = `${text}`
+    targetting.addEventListener('click', rewriteTargetting)
+}
+
+function rewriteTargetting(text) {
+    targetting.classList.remove(SHOWING_TARGETTING_CN)
+    targetForm.classList.add(SHOWING_TARGETTING_CN)
+    saveTarget()
+}
+
+
 function loadTarget() {
     const currentTarget = localStorage.getItem(TARGET_LS);
-    if (currentTarget === null) {
+    console.log(currentTarget)
+    // const undefinedCurrentTarget = currentTarget.value === undefined
+    // 실험
+
+    if (currentTarget === null || currentTarget.value === undefined ) {
         askForTarget()
-    } else {
+    } else if(currentTarget === !null || currentTarget.value === !undefined) {
+        paintTargetting(currentTarget)
+    } else { 
+        console.log('paint')
         paintTargetting(currentTarget)
     }
 }
