@@ -1,18 +1,19 @@
 body {
   margin: 0;
+  font-family: "Yeon Sung", cursive;
 }
 .main {
   position: relative;
   width: 100%;
   margin: auto;
-  margin-top: 12%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .js-clock h1 {
-  margin-bottom: 3rem;
+  margin: 6rem 0 1rem 0;
+  font-family: "Open Sans", sans-serif;
   font-size: 6rem;
   color: aliceblue;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
@@ -26,24 +27,34 @@ body {
 
 .js-greetings,
 .js-targetting {
+  margin: 12px 0 12px 0;
   color: aliceblue;
+  font-size: larger;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0), 0 0 7px rgba(0, 0, 0, 0.7);
 }
 
 .main input {
   margin: 4px;
   height: 24px;
   background-color: rgba(0, 0, 0, 0.18);
-
   border: none;
   border-radius: 4px;
   outline: none;
   caret-color: aliceblue;
   color: aliceblue;
   text-align: center;
+  font-family: "Yeon Sung", cursive;
+  font-size: 18px;
 }
 input::placeholder {
+  font-size: 16px;
   text-align: center;
+  font-family: "Yeon Sung", cursive;
   color: aliceblue;
+}
+
+.targetting {
+  letter-spacing: 8px;
 }
 
 .form,
@@ -72,6 +83,12 @@ input::placeholder {
   border: none;
   color: rgba(182, 0, 0, 0.74);
   font-weight: bold;
+}
+
+.js-toDoList li span {
+  color: black;
+  font-size: 22px;
+  text-shadow: 0 0 3px rgb(255, 255, 255), 0 0 0.7px rgba(255, 255, 255, 0.7);
 }
 
 .js-weather {
