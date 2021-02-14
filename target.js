@@ -37,27 +37,14 @@ function rewriteTargetting(text) {
     saveTarget()
 }
 
-
-const currentTarget = localStorage.getItem(TARGET_LS);
-const emptyTarget = currentTarget === !null
-console.log(currentTarget)
-
 function loadTarget() {
-
+    const currentTarget = localStorage.getItem(TARGET_LS);
     if (currentTarget === null || currentTarget === undefined) {
         askForTarget()
     } else if (currentTarget === 'undefined') {
         askForTarget()
     } else {
-        console.log('비어있지 않아')
         paintTargetting(currentTarget)
     }
 }
 loadTarget()
-
-// else if (currentTarget.value === undefined) {
-//     askForTarget()
-// } 
-// paintTargetting(currentTarget)
-
-// if (currentTarget !== null )

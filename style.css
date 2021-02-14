@@ -51,6 +51,7 @@ input::placeholder {
   text-align: center;
   font-family: "Yeon Sung", cursive;
   color: aliceblue;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0), 0 0 7px rgba(0, 0, 0, 0.7);
 }
 
 .targetting {
@@ -82,11 +83,12 @@ input::placeholder {
   background-color: transparent;
   border: none;
   color: rgba(182, 0, 0, 0.74);
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .js-toDoList li span {
   color: black;
+  font-weight: 500;
   font-size: 22px;
   text-shadow: 0 0 3px rgb(255, 255, 255), 0 0 0.7px rgba(255, 255, 255, 0.7);
 }
@@ -95,6 +97,11 @@ input::placeholder {
   position: absolute;
   top: 24px;
   right: 32px;
+  color: black;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgb(255, 255, 255), 0 0 0.7px rgba(255, 255, 255, 0.7);
+
+  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0), 0 0 7px rgba(0, 0, 0, 0.7); */
 }
 
 @keyframes fadeIn {
