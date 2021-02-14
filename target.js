@@ -21,6 +21,7 @@ function handleTargettingSubmit(event) {
 function askForTarget() {
     targetForm.classList.add(SHOWING_TARGETTING_CN)
     targetForm.addEventListener('submit', handleTargettingSubmit)
+    
 }
 
 function paintTargetting(text) {
@@ -37,19 +38,26 @@ function rewriteTargetting(text) {
 }
 
 
-function loadTarget() {
-    const currentTarget = localStorage.getItem(TARGET_LS);
-    console.log(currentTarget)
-    // const undefinedCurrentTarget = currentTarget.value === undefined
-    // 실험
+const currentTarget = localStorage.getItem(TARGET_LS);
+const emptyTarget = currentTarget === !null
+console.log(currentTarget)
 
-    if (currentTarget === null || currentTarget.value === undefined ) {
+function loadTarget() {
+
+    if (currentTarget === null || currentTarget === undefined) {
         askForTarget()
-    } else if(currentTarget === !null || currentTarget.value === !undefined) {
-        paintTargetting(currentTarget)
-    } else { 
-        console.log('paint')
+    } else if (currentTarget === 'undefined') {
+        askForTarget()
+    } else {
+        console.log('비어있지 않아')
         paintTargetting(currentTarget)
     }
 }
 loadTarget()
+
+// else if (currentTarget.value === undefined) {
+//     askForTarget()
+// } 
+// paintTargetting(currentTarget)
+
+// if (currentTarget !== null )
